@@ -25,7 +25,7 @@ const Experience = () => {
       id: 2,
       title: 'Computer Science Student',
       company: 'KIIT University',
-      description: 'Pursuing B.Tech in Electronics Engineering with focus on data systems, programming, and modern computing technologies.',
+      description: 'Pursuing B.Tech  with focus on data systems, programming, and modern computing technologies.',
       period: '2021 - 2025',
     },
     {

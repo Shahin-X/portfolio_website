@@ -28,8 +28,8 @@ const Hero = () => {
 
         setCounts({
           years: Math.round(2 * easeOut),
-          projects: Math.round(15 * easeOut),
-          certifications: Math.round(5 * easeOut),
+          projects: Math.round(3 * easeOut),
+          certifications: Math.round(3 * easeOut),
         });
 
         if (step >= steps) {

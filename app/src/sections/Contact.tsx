@@ -51,8 +51,8 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'skshahin.mahammad@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
+    { icon: Mail, label: 'Email', value: 'shahinmd1710@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+91 90648 29003' },
     { icon: MapPin, label: 'Location', value: 'Bhubaneswar, Odisha, India' },
   ];
 

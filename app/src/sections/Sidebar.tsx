@@ -50,7 +50,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
           <div className="relative mb-4">
             <div className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-[#e85d3f] to-[#a3e635]">
               <img
-                src="/hero-portrait.jpg"
+                src="/hero_1.jpg"
                 alt="Sk Shahin Mahammad"
                 className="w-full h-full object-cover mix-blend-luminosity"
               />

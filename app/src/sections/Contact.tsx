@@ -31,20 +31,29 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const form = new FormData();
+      form.append('name', formData.name);
+      form.append('email', formData.email);
+      form.append('message', formData.message);
+
+      const response = await fetch('https://formspree.io/f/xkovnwnl', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: form,
       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setIsSubmitted(false), 3000);
+      if (!response.ok) {
+        throw new Error('Formspree error');
       }
+
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 3000);
+
     } catch (error) {
       alert('Failed to send message. Please try again.');
     } finally {

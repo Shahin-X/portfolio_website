@@ -46,9 +46,6 @@ const Contact = () => {
         body: form,
       });
 
-      if (!response.ok) {
-        throw new Error('Formspree error');
-      }
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });

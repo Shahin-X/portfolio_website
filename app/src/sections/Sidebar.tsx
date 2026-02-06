@@ -24,9 +24,9 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
 
   const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/in/sk-shahin-mahammad-945204283', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Shahin-X', label: 'GitHub' },
     { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/jake.s1702/?hl=en', label: 'Instagram' },
   ];
 
   const scrollToSection = (href: string) => {

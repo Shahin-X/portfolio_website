@@ -41,18 +41,21 @@ const Contact = () => {
       form.append('email', formData.email);
       form.append('message', formData.message);
 
-      const response = await fetch('https://formspree.io/f/xkovnwnl', {
+      // Option B: no-cors (fire & forget)
+      await fetch('https://formspree.io/f/xkovnwnl', {
         method: 'POST',
         body: form,
+        mode: 'no-cors',
       });
 
-
+      // Always show success
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setIsSubmitted(false), 3000);
 
-    } catch (error) {
-      alert('Failed to send message. Please try again.');
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch {
+      // This will almost never run with no-cors
+      alert('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
